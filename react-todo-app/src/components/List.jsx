@@ -40,6 +40,7 @@ export default function List({ title, completed, id, todoData, setTodoData }) {
     });
 
     setTodoData(newTodoData);
+    localStorage.setItem("todoData", JSON.stringify(newTodoData));
   };
 
   const handleEditChange = (e) => {
@@ -56,6 +57,8 @@ export default function List({ title, completed, id, todoData, setTodoData }) {
       return data;
     });
     setTodoData(newTodoData);
+    localStorage.setItem("todoData", JSON.stringify(newTodoData));
+
     setIsEditing(false);
   };
 
