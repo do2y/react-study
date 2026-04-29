@@ -4,18 +4,12 @@ import Lists from "./components/Lists";
 import Form from "./components/Form";
 
 export default function App() {
-  const [todoData, setTodoData] = useState([
-    {
-      id: "1",
-      title: "공부하기",
-      completed: false,
-    },
-    {
-      id: "2",
-      title: "청소하기",
-      completed: false,
-    },
-  ]);
+  //로컬스토리지에 저장할 때 텍스트로 변경해줘야함.
+  const initialTodoData = localStorage.getItem("todoData")
+    ? JSON.parse(localStorage.getItem("todoData"))
+    : [];
+
+  const [todoData, setTodoData] = useState(initialTodoData);
 
   const [value, setValue] = useState(""); //setValue는 value값을 업데이트 해주는 함수
 
@@ -29,6 +23,7 @@ export default function App() {
     };
 
     setTodoData([...todoData, newTodo]);
+    localStorage.setItem("todoData", JSON.stringify([...todoData, newTodo]));
     setValue("");
   };
 

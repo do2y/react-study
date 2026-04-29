@@ -1,12 +1,6 @@
 import List from "./List";
 
 export default function Lists({ todoData, setTodoData }) {
-  const handleClick = (id) => {
-    let newTodoData = todoData.filter((data) => data.id !== id);
-    console.log(newTodoData);
-    setTodoData(newTodoData);
-  };
-
   return (
     <div>
       {todoData.map((data) => (
