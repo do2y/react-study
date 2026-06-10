@@ -1,3 +1,4 @@
+<img width="800" height="405" alt="2026-06-10170448-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/535f6ff1-c142-4b6a-953e-de797a38a7ff" />
 # 🎬 Netflix Clone App
 
 TMDB API를 활용해 실제 영화 데이터를 기반으로 만든 넷플릭스 클론 웹 애플리케이션입니다.
@@ -7,7 +8,8 @@ TMDB API를 활용해 실제 영화 데이터를 기반으로 만든 넷플릭�
 ### 🎞 Preview
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/28d8ba66-a15c-4f8f-88d6-048829f36096" alt="Netflix Clone Demo" />
+  <img width="800" height="405" alt="2026-06-10170448-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/49951d80-4279-4864-802e-aa87e98e9050" />
+
 </p>
 
 </br>
