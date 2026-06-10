@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "../../api/axios";
 import { useDebounce } from "../../hooks/useDebounce";
 import "./SearchPage.css";
 
 export default function SearchPage() {
+  const navigate = useNavigate();
   const [searchResults, setSearchResults] = useState([]);
   const useQuery = () => {
     return new URLSearchParams(useLocation().search); //?q= 뒷 부분만 가져오기 위해 URLSearchParams 사용
@@ -40,7 +41,11 @@ export default function SearchPage() {
             const movieImageUrl =
               "https://image.tmdb.org/t/p/w500" + movie.backdrop_path;
             return (
-              <div className="movie" key={movie.id}>
+              <div
+                onClick={() => navigate(`/${movie.id}`)}
+                className="movie"
+                key={movie.id}
+              >
                 <div className="movie__column-poster">
                   <img
                     src={movieImageUrl}
